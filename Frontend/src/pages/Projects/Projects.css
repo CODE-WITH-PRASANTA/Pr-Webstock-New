@@ -1,0 +1,237 @@
+.projects-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px;
+    padding-top: 120px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .Projects-section {
+    position: relative;
+    height: 500px; /* Set the height as needed */
+    /* width: 100vw; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #005f85;
+    background-image: url('../../assets/bg-service.png'), url('../../assets/background-2-service.png');
+    background-size: cover, cover; /* Ensure both images cover the full width */
+    background-position: center, center; /* Center align both backgrounds */
+    background-repeat: no-repeat, no-repeat; /* Prevent repetition */
+    background-blend-mode: overlay; /* Optional: blend images if needed */
+  }
+  
+  .Projects-content {
+    z-index: 2;
+  }
+  
+  .Projects-section::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .Projects-content h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgb(255, 255, 255 , 0.8); /* Add text shadow */
+  }
+  
+  .Projects-content p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    color: #a7d0e8;
+    max-width: 600px;
+  }
+  
+  .projects-page-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    max-width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardLoad 0.8s ease-in-out;
+  }
+  
+  @keyframes cardLoad {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .projects-page-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-preview {
+    position: relative;
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  .project-laptop {
+    transition: transform 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    background: #FFFFFF;
+    width: 75%;
+    max-width: 500px;
+    animation: laptopLoad 1s ease-in-out;
+  }
+  
+  @keyframes laptopLoad {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .project-mobile {
+    position: absolute;
+    right: 0px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 90px;
+    background: #000;
+    border: 2px solid #FFFFFF;
+    backdrop-filter: blur(7.5px);
+    animation: mobileLoad 1.2s ease-in-out;
+  }
+  
+  @keyframes mobileLoad {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .projects-page-card:hover .project-laptop {
+    transform: translateY(-5px) scale(1.03);
+  }
+  
+  .projects-page-card:hover .project-mobile {
+    transform: translateX(-10px) scale(1.1);
+    opacity: 1;
+  }
+  
+  h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .industry, .education {
+    background-color: #6b5b95;
+  }
+  
+  .project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .website-btn, .mobile-btn, .link-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .website-btn {
+    background: linear-gradient(135deg, #ff4e50, #f9d423);
+  }
+  
+  .link-btn {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  
+  .website-btn:hover, .link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mobile-btn {
+    background-color: #6b5b95;
+  }
+  
+  .website-btn:hover {
+    background: linear-gradient(135deg, #e93e50, #ebae23);
+  }
+  
+  .link-btn:hover {
+    background: linear-gradient(135deg, #5b0ecb, #1e63c9);
+  }
+  
+  .mobile-btn:hover {
+    background-color: #56477c;
+  }
+  
+
+
+  @media (max-width:480px) {
+    .project-mobile{
+      width: 50px;
+      animation: none;
+    }
+    .projects-section{
+      padding-top: 20px;
+    }
+  }

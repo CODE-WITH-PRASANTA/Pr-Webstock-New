@@ -1,0 +1,184 @@
+/* Keyframes for scaling up images */
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.09);
+    }
+  }
+  
+  /* Keyframes for gently rotating the project cards */
+  @keyframes gentleRotate {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+  @keyframes scaleUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  /* Grid layout for projects and ads */
+  .project-grid, .ads-grid {
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Styling for both project and ads cards */
+  .project-card, .ads-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 3px solid #ccc;
+    padding: 20px;
+    overflow: hidden; /* Ensures no content spills outside the card */
+  }
+  
+  /* Applying the gentle rotation only to project cards */
+  .project-card {
+    animation: gentleRotate 5s infinite alternate ease-in-out;
+  }
+  
+  /* No rotation for ads cards */
+  .ads-card {
+    /* No animation here to stop the rotation */
+  }
+  
+  /* Styling for images within the project and ads cards */
+  .project-image, .ads-image {
+    height: 120px;
+    border: 3px solid #ccc;
+    width: 100%;
+   
+    object-fit: cover; /* Ensures images cover the area without distorting aspect ratio */
+    border-radius: 30px;
+    animation: scaleUp 5s infinite; /* Loop the animation infinitely every 5 seconds */
+  }
+  
+  /* Information section under images for both projects and ads */
+  .project-info, .ads-info {
+    width: 100%; /* Sets the width to match the image above */
+    text-align: center; /* Centers the text within the container */
+  }
+  
+  /* Styling for headings in project-info and ads-info sections */
+  .project-info h3, .ads-info h3 {
+    margin-top: 10px;
+    margin-bottom: 5px; /* Adds a little space below the heading */
+  }
+  
+  /* Styling for links in project-info and ads-info sections */
+  .project-info a, .ads-info a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+    background-color: #f1f1f1; /* Light background color for the link for visibility */
+    padding: 5px 10px; /* Adds padding around the text */
+    border-radius: 5px; /* Optional: rounds the corners of the link background */
+  }
+  
+  /* Header styling for the project and ads sections */
+  .project-header, .ads-header {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Adjust font-family if needed */
+    color: #1a1a1a; /* Darker text color for better contrast */
+  }
+  
+  /* Specific styling for project and ads headings */
+  .projct-heading, .ads-heading {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0a0a23; /* Adjust color to match the desired look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adds a subtle shadow below the text */
+  }
+  
+  /* Paragraph styling in headers */
+  .project-header p, .ads-header p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333; /* Subtle gray for the description */
+  }
+  
+  /* General media query for tablets and small devices */
+@media (max-width: 780px) {
+    .project-grid, .ads-grid {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 15px; /* Reduce gap between items */
+      padding: 15px; /* Reduce padding */
+      width: 80%;
+    }
+  
+    .project-card, .ads-card {
+      padding: 15px; /* Reduce padding */
+    }
+  
+    .project-image, .ads-image {
+
+      border-radius: 20px; /* Adjust border radius */
+      width: 80%;
+    }
+  
+    .projct-heading, .ads-heading {
+      font-size: 2rem; /* Smaller heading size */
+    }
+  
+    .project-header p, .ads-header p {
+      font-size: 1rem; /* Smaller paragraph text */
+    }
+  
+    .project-info a, .ads-info a {
+      padding: 4px 8px; /* Reduce padding for buttons */
+    }
+  }
+  
+  /* Specific media query for mobile devices */
+  @media (max-width: 480px) {
+    .project-grid, .ads-grid {
+      grid-template-columns: 1fr; /* Ensure items are in a single column */
+      gap: 10px; /* Reduce gap between items */
+      padding: 10px; /* Further reduce padding */
+      width: 80%;
+    }
+  
+    .project-card, .ads-card {
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .project-image, .ads-image {
+      border-radius: 15px; /* Smaller border radius */
+    }
+  
+    .projct-heading, .ads-heading {
+      font-size: 1.5rem; /* Further reduce heading size */
+    }
+  
+    .project-header p, .ads-header p {
+      font-size: 0.9rem; /* Smaller paragraph text */
+    }
+  
+    .project-info a, .ads-info a {
+      padding: 3px 6px; /* Reduce padding for buttons */
+      font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .project-header , .ads-header{
+      width: 70%;
+      margin: auto;
+    }
+  }
+  
